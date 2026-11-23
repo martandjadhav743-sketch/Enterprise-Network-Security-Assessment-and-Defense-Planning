@@ -1,138 +1,149 @@
 # Enterprise Network Security Assessment and Defense Planning
 
-This project simulates a defensive network security assessment for a fictional
-small-to-medium enterprise with 50–100 employees.
+This project performs a simulated, defensive-only network security assessment for the fictional company **Northwind Business Solutions**. It uses mock data to identify defensive improvements, calculate risk, document controls, and produce an assessment report.
 
-The project uses only mock data and simulated findings. It does not scan,
-attack, modify, or access any real network, device, or system.
+All company details, systems, IP addresses, hostnames, configurations, findings, and events are fictional. This project must not be used to assess, scan, exploit, or interact with real networks.
 
-## Objective
+## Project purpose
 
-Assess the security posture of a fictional enterprise network and produce a
-professional, defensive security assessment report.
+The project demonstrates an end-to-end defensive security assessment workflow:
 
-## Scope
+1. Define a fictional company and network scope.
+2. Create a logical network diagram.
+3. Document simulated findings and threats.
+4. Calculate risk using a Python-based risk engine.
+5. Recommend defensive controls and incident-response actions.
+6. Generate a complete assessment report.
+7. Verify the project with automated tests.
 
-The simulated environment includes:
+## Project structure
 
-- Internal LAN
-- Internet-facing services
-- Employee Wi-Fi
-- Guest Wi-Fi
-- Firewalls, switches, servers, and employee endpoints
-- Monitoring and logging systems
-
-## Deliverables
-
-- Logical network diagram
-- Mock findings and threat catalog
-- Risk analysis table
-- Defensive control recommendations
-- Network security assessment report
-- Automated tests
-
-## Safety Notice
-
-This project is for defensive security learning only.
-
-- No real networks are scanned.
-- No real systems are modified.
-- No malware, exploits, or offensive tools are created.
-- All findings, IP addresses, hostnames, and events are fictional mock data.
-- Simulation mode is the default.
-
-## How to Run
-
-1. Open PowerShell.
-2. Move to the project folder:
-
-```powershell
-cd "C:\Users\marta\Desktop\Projects\Enterprise Network Security Assessment and Defense Planning"
+```text
+.
+├── data/
+│   ├── mock_company_profile.json
+│   ├── mock_findings.json
+│   ├── mock_network_assets.json
+│   └── mock_network_scope.json
+├── diagrams/
+│   └── network_diagram.svg
+├── docs/
+│   ├── defense_strategy.md
+│   ├── incident_response_plan.md
+│   ├── network_data_flows.md
+│   └── threat_risk_catalog.md
+├── reports/
+│   ├── network_security_assessment_report.md
+│   └── risk_table.md
+├── src/
+│   ├── assessment_report.py
+│   ├── data_loader.py
+│   ├── report_generator.py
+│   ├── risk_engine.py
+│   └── __init__.py
+├── tests/
+├── presentations/
+├── README.md
+├── PROGRESS.md
+├── pytest.ini
+└── requirements.txt
 ```
 
-3. Activate the Python virtual environment:
+## Key deliverables
+
+| Deliverable | Location |
+|---|---|
+| Company profile | `data/mock_company_profile.json` |
+| Network scope | `data/mock_network_scope.json` |
+| Network asset inventory | `data/mock_network_assets.json` |
+| Network data flows | `docs/network_data_flows.md` |
+| Logical network diagram | `diagrams/network_diagram.svg` |
+| Simulated findings | `data/mock_findings.json` |
+| Threat and risk catalog | `docs/threat_risk_catalog.md` |
+| Risk-analysis engine | `src/risk_engine.py` |
+| Risk table | `reports/risk_table.md` |
+| Defensive strategy | `docs/defense_strategy.md` |
+| Incident-response plan | `docs/incident_response_plan.md` |
+| Assessment report generator | `src/assessment_report.py` |
+| Assessment report | `reports/network_security_assessment_report.md` |
+| Automated tests | `tests/` |
+
+## Requirements
+
+- Python 3.14 or later
+- PowerShell on Windows
+- Git
+- A Python virtual environment
+
+## Setup
+
+From the project root, create and activate the virtual environment:
 
 ```powershell
+python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-4. Validate the mock company profile:
+Install the required packages:
 
 ```powershell
-python -c "from src.data_loader import load_company_profile, load_network_assets; company=load_company_profile(); assets=load_network_assets(); print('Company:', company['company']['name']); print('Business systems:', len(company['business_systems'])); print('Network zones:', len(assets['network_zones'])); print('Assets:', len(assets['assets']))"
+pip install -r requirements.txt
 ```
 
-5. Analyze the simulated findings and display the risk table:
+## Generate the risk table
+
+Generate the risk table using the assessment report workflow:
 
 ```powershell
-python -c "from src.data_loader import load_json_file; from src.risk_engine import analyze_findings; from src.report_generator import create_risk_table; findings=analyze_findings(load_json_file('mock_findings.json')['findings']); print(create_risk_table(findings))"
+python -c "from src.assessment_report import create_assessment_report; report = create_assessment_report(); from pathlib import Path; Path(r'reports\risk_table.md').write_text(report, encoding='utf-8'); print('Risk table generated')"
 ```
 
-6. Generate and save the full assessment report:
+Expected output:
+
+```text
+Risk table generated
+```
+
+The generated risk table is saved at:
+
+```text
+reports/risk_table.md
+```
+
+## Generate the assessment report
+
+Generate the full assessment report:
 
 ```powershell
-python -c "from src.assessment_report import save_assessment_report; path=save_assessment_report('reports/network_security_assessment_report.md'); print('Saved:', path)"
+python -c "from src.assessment_report import create_assessment_report; report = create_assessment_report(); from pathlib import Path; Path(r'reports\network_security_assessment_report.md').write_text(report, encoding='utf-8'); print('Assessment report generated')"
 ```
 
-7. Open the generated report:
+Expected output:
 
-```powershell
-Start-Process .\reports\network_security_assessment_report.md
+```text
+Assessment report generated
 ```
 
-## Defensive Controls
+The generated report is saved at:
 
-The project includes a defensive security strategy and incident-response plan.
-
-Key controls include:
-
-- Network segmentation
-- Default-deny firewall policy
-- Guest Wi-Fi isolation
-- Multi-factor authentication for administrative access
-- Restricted DMZ-to-server communication
-- Centralized security logging and monitoring
-- Backup access restrictions
-- Incident-response preparation, detection, containment, recovery, and review
-
-## Automated Tests
-
-The project includes automated tests for the simulated risk-analysis workflow.
-
-Test coverage includes:
-
-- Risk-score calculation
-- Risk-level classification
-- Finding analysis and sorting
-- Company-profile validation
-- Network-asset validation
-- Markdown risk-table generation
-- Assessment-report generation
-- Report-file saving
-
-Run the tests with:
-
-```powershell
-pytest -v
+```text
+reports/network_security_assessment_report.md
 ```
 
-Run the tests with coverage:
+## Run automated tests
+
+Run all automated tests with coverage:
 
 ```powershell
 pytest --cov=src --cov-report=term-missing
 ```
 
-## Project Presentation
+Expected result:
 
-The project includes a presentation summarizing the simulated security
-assessment, key findings, defensive controls, incident-response plan, and
-automated testing results.
+```text
+48 passed
+```
 
-Presentation files:
+## Security disclaimer
 
-- `presentations/enterprise-network-security-assessment.pptx`
-- `presentations/enterprise-network-security-assessment.pdf`
-
-## Project Status
-
-See `PROGRESS.md` for the current phase and completed work.
+This project is for defensive security learning and documentation only. It contains fictional mock data and does not provide instructions, tools, or procedures for attacking, scanning, exploiting, or compromising real systems.

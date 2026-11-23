@@ -1,24 +1,45 @@
 # Python
 __pycache__/
 *.py[cod]
-*.egg-info/
-.pytest_cache/
-.coverage
-htmlcov/
+*$py.class
+*.so
 
 # Virtual environment
 .venv/
 venv/
+env/
+ENV/
 
-# Project-generated files
-data/
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Local secrets and environment files
+.env
+.env.*
+
+# Logs and temporary files
+*.log
 logs/
-reports/
-databases/
-*.db
-*.sqlite3
+tmp/
+temp/
+.cache/
 
-# Operating system files
-Thumbs.db
-Desktop.ini
+# Operating-system files
 .DS_Store
+Thumbs.db
+
+# Editor and IDE files
+.vscode/
+.idea/

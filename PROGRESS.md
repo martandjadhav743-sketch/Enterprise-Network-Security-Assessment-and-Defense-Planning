@@ -1,42 +1,83 @@
 # Project Progress
 
-## Current Phase
+## Project
 
-Phase 7 — Final project review and cleanup
+**Enterprise Network Security Assessment and Defense Planning**
 
-## Completed Phases
+This is a simulated, defensive-only security assessment project for the fictional company Northwind Business Solutions. It uses mock data and does not assess, scan, exploit, or interact with any real network.
 
-- Phase 0: Project planning and approval
-- Phase 1: Create project structure and documentation
-- Phase 2: Define the fictional company and network scope
-- Phase 3: Build the Python risk-analysis foundation
-- Phase 4: Design defensive controls and firewall policy
-- Phase 5: Add automated tests
-- Phase 6: Create project presentation
+## Status
 
-## Phase 6 Tasks
+**Phase 9 — End-to-end verification and documentation: in progress.**
 
-- [x] Create PowerPoint presentation
-- [x] Add project-overview slide
-- [x] Add assessment-scope slide
-- [x] Add risk-method slide
-- [x] Add key-findings slide
-- [x] Add defensive-controls slide
-- [x] Add incident-response slide
-- [x] Add testing-results slide
-- [x] Add conclusion slide
-- [x] Export presentation as PDF
-- [x] Update README.md and PROGRESS.md
-- [x] Take Phase 6 screenshot
-- [x] Upload Phase 6 files to GitHub
+## Completed phases
 
-## Phase 6 Summary
+### Phase 1 — Structure and documentation
 
-Created a nine-slide presentation and PDF export summarizing the simulated
-assessment, key findings, defensive controls, incident-response plan, and
-automated testing results.
+- Created the project folder structure.
+- Created `README.md`, `PROGRESS.md`, and `.gitignore`.
+- Created a Python virtual environment.
+- Added project dependencies and test configuration.
 
-## Notes
+### Phase 2 — Fictional company and network scope
 
-This project uses only simulated, defensive security data. No real networks or
-systems are scanned, modified, or accessed.
+- Created `data/mock_company_profile.json`.
+- Created `data/mock_network_assets.json`.
+- Created `data/mock_network_scope.json`.
+- Created `docs/network_data_flows.md`.
+- Defined seven network zones, eleven assets, and ten primary data flows.
+
+### Phase 3 — Logical network diagram
+
+- Created `diagrams/network_diagram.svg`.
+- Documented the network zones, assets, and communication paths.
+
+### Phase 4 — Mock findings and threat catalog
+
+- Created `data/mock_findings.json` with six simulated findings.
+- Created `docs/threat_risk_catalog.md`.
+- Mapped six threats to findings, risk inputs, risk scores, and defensive recommendations.
+
+### Phase 5 — Python risk-analysis tool
+
+- Created `src/data_loader.py`.
+- Created `src/risk_engine.py`.
+- Created `src/report_generator.py`.
+- Created `src/assessment_report.py`.
+- Generated `reports/risk_table.md`.
+
+### Phase 6 — Defensive controls and firewall policy
+
+- Created `docs/defense_strategy.md`.
+- Created `docs/incident_response_plan.md`.
+- Documented segmentation, access-control, monitoring, backup, and incident-response controls.
+
+### Phase 7 — Assessment report
+
+- Created `src/assessment_report.py`.
+- Generated `reports/network_security_assessment_report.md`.
+- Included an executive summary, scope, network overview, risk method, findings, risk table, recommendations, remediation priorities, and conclusion.
+
+### Phase 8 — Automated tests
+
+- Created tests for the data loader, risk engine, report generator, and assessment report.
+- Achieved 48 passing tests and 98% source coverage.
+
+## Current phase
+
+### Phase 9 — End-to-end verification and documentation
+
+- Verified the network scope JSON.
+- Verified the threat and risk catalog.
+- Verified the generated assessment report.
+- Remaining work:
+  - Correct the project documentation.
+  - Correct `.gitignore` so required data and report files are included.
+  - Run the complete end-to-end workflow.
+  - Run all automated tests.
+  - Capture final verification screenshots.
+  - Create the final project summary.
+
+## Optional extra
+
+A presentation may be added as an optional supporting artifact. It is not a required phase in the original project plan.
