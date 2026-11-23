@@ -95,6 +95,33 @@ Key controls include:
 - Backup access restrictions
 - Incident-response preparation, detection, containment, recovery, and review
 
+## Automated Tests
+
+The project includes automated tests for the simulated risk-analysis workflow.
+
+Test coverage includes:
+
+- Risk-score calculation
+- Risk-level classification
+- Finding analysis and sorting
+- Company-profile validation
+- Network-asset validation
+- Markdown risk-table generation
+- Assessment-report generation
+- Report-file saving
+
+Run the tests with:
+
+```powershell
+pytest -v
+```
+
+Run the tests with coverage:
+
+```powershell
+pytest --cov=src --cov-report=term-missing
+```
+
 ## Project Status
 
 See `PROGRESS.md` for the current phase and completed work.
