@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+  <rect width="1000" height="620" fill="#f8fafc"/>
+  <text x="500" y="40" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#0f172a">Northwind Business Solutions — Simulated Logical Network Diagram</text>
+  <text x="500" y="65" text-anchor="middle" font-family="Arial" font-size="13" fill="#475569">Fictional mock network for defensive security assessment only</text>
+
+  <rect x="420" y="90" width="160" height="50" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="500" y="120" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#7f1d1d">Internet</text>
+
+  <rect x="400" y="180" width="200" height="55" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="500" y="203" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1e3a8a">Perimeter Firewall</text>
+  <text x="500" y="223" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e3a8a">fw-northwind-01</text>
+
+  <rect x="120" y="290" width="200" height="80" rx="8" fill="#fef3c7" stroke="#d97706"/>
+  <text x="220" y="318" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#92400e">DMZ</text>
+  <text x="220" y="340" text-anchor="middle" font-family="Arial" font-size="12" fill="#92400e">Web server</text>
+  <text x="220" y="358" text-anchor="middle" font-family="Arial" font-size="12" fill="#92400e">Email server</text>
+
+  <rect x="400" y="290" width="200" height="80" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="500" y="318" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#14532d">Internal LAN</text>
+  <text x="500" y="340" text-anchor="middle" font-family="Arial" font-size="12" fill="#14532d">Employee workstations</text>
+  <text x="500" y="358" text-anchor="middle" font-family="Arial" font-size="12" fill="#14532d">Core switch</text>
+
+  <rect x="680" y="290" width="200" height="80" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="780" y="318" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#312e81">Server VLAN</text>
+  <text x="780" y="340" text-anchor="middle" font-family="Arial" font-size="12" fill="#312e81">CRM, file, backup</text>
+  <text x="780" y="358" text-anchor="middle" font-family="Arial" font-size="12" fill="#312e81">servers</text>
+
+  <rect x="120" y="430" width="200" height="70" rx="8" fill="#fce7f3" stroke="#db2777"/>
+  <text x="220" y="458" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#831843">Employee Wi-Fi</text>
+  <text x="220" y="480" text-anchor="middle" font-family="Arial" font-size="12" fill="#831843">Managed devices</text>
+
+  <rect x="400" y="430" width="200" height="70" rx="8" fill="#f3f4f6" stroke="#6b7280"/>
+  <text x="500" y="458" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#374151">Guest Wi-Fi</text>
+  <text x="500" y="480" text-anchor="middle" font-family="Arial" font-size="12" fill="#374151">Internet access only</text>
+
+  <rect x="680" y="430" width="200" height="70" rx="8" fill="#ccfbf1" stroke="#0d9488"/>
+  <text x="780" y="458" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#134e4a">Management VLAN</text>
+  <text x="780" y="480" text-anchor="middle" font-family="Arial" font-size="12" fill="#134e4a">SIEM and admin access</text>
+
+  <line x1="500" y1="140" x2="500" y2="180" stroke="#334155" stroke-width="3"/>
+  <line x1="500" y1="235" x2="220" y2="290" stroke="#334155" stroke-width="3"/>
+  <line x1="500" y1="235" x2="500" y2="290" stroke="#334155" stroke-width="3"/>
+  <line x1="500" y1="235" x2="780" y2="290" stroke="#334155" stroke-width="3"/>
+  <line x1="220" y1="430" x2="500" y2="370" stroke="#334155" stroke-width="3"/>
+  <line x1="500" y1="430" x2="500" y2="370" stroke="#dc2626" stroke-width="3" stroke-dasharray="8 6"/>
+  <line x1="780" y1="430" x2="780" y2="370" stroke="#334155" stroke-width="3"/>
+
+  <text x="530" y="415" font-family="Arial" font-size="12" fill="#dc2626">Blocked by default</text>
+  <text x="250" y="270" font-family="Arial" font-size="12" fill="#334155">Allowed web/email</text>
+  <text x="610" y="270" font-family="Arial" font-size="12" fill="#334155">Restricted server access</text>
+  <text x="300" y="415" font-family="Arial" font-size="12" fill="#334155">Controlled access</text>
+
+  <text x="500" y="560" text-anchor="middle" font-family="Arial" font-size="13" fill="#334155">Solid lines: controlled permitted communication</text>
+  <text x="500" y="580" text-anchor="middle" font-family="Arial" font-size="13" fill="#dc2626">Dashed red line: guest Wi-Fi access to internal LAN is blocked by default</text>
+</svg>

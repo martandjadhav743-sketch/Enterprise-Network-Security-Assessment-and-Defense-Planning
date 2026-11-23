@@ -43,7 +43,36 @@ This project is for defensive security learning only.
 
 ## How to Run
 
-Instructions will be added as the project is built.
+1. Open PowerShell.
+2. Move to the project folder:
+
+```powershell
+cd "C:\Users\marta\Desktop\Projects\Enterprise Network Security Assessment and Defense Planning"
+```
+
+3. Activate the Python virtual environment:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+4. Validate the mock company profile:
+
+```powershell
+python -c "import json; data=json.load(open(r'data\mock_company_profile.json', encoding='utf-8')); print('JSON is valid'); print(data['company']['name']); print(len(data['business_systems']), 'business systems')"
+```
+
+5. Validate the mock network asset inventory:
+
+```powershell
+python -c "import json; d=json.load(open(r'data\mock_network_assets.json', encoding='utf-8')); print('JSON is valid'); print(len(d['network_zones']), 'network zones'); print(len(d['assets']), 'assets'); print(sum(1 for a in d['assets'] if a['criticality']=='Critical'), 'critical assets')"
+```
+
+6. Open the logical network diagram:
+
+```powershell
+Start-Process .\diagrams\network_diagram.svg
+```
 
 ## Project Status
 

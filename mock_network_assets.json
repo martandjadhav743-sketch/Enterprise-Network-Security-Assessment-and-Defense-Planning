@@ -1,0 +1,175 @@
+{
+  "assessment": {
+    "company": "Northwind Business Solutions",
+    "assessment_type": "Simulated defensive network security assessment",
+    "data_source": "Fictional mock inventory created for learning and documentation",
+    "disclaimer": "All assets, IP addresses, hostnames, configurations, and findings are fictional and must not be used against real networks."
+  },
+  "network_zones": [
+    {
+      "zone_id": "internet",
+      "name": "Internet",
+      "description": "Untrusted external network",
+      "trust_level": "Untrusted"
+    },
+    {
+      "zone_id": "dmz",
+      "name": "DMZ",
+      "description": "Isolated zone for internet-facing services",
+      "trust_level": "Restricted"
+    },
+    {
+      "zone_id": "internal_lan",
+      "name": "Internal LAN",
+      "description": "Employee workstations and internal business systems",
+      "trust_level": "Internal"
+    },
+    {
+      "zone_id": "server_vlan",
+      "name": "Server VLAN",
+      "description": "Internal servers and business applications",
+      "trust_level": "Restricted"
+    },
+    {
+      "zone_id": "employee_wifi",
+      "name": "Employee Wi-Fi",
+      "description": "Wireless network for managed company devices",
+      "trust_level": "Internal"
+    },
+    {
+      "zone_id": "guest_wifi",
+      "name": "Guest Wi-Fi",
+      "description": "Wireless network for visitors and personal devices",
+      "trust_level": "Untrusted"
+    },
+    {
+      "zone_id": "management_vlan",
+      "name": "Management VLAN",
+      "description": "Administrative access to network devices and servers",
+      "trust_level": "Highly restricted"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "FW-01",
+      "hostname": "fw-northwind-01",
+      "asset_type": "Firewall",
+      "zone": "internet",
+      "ip_address": "203.0.113.10",
+      "criticality": "Critical",
+      "internet_facing": true,
+      "operating_system": "Fictional firewall operating system",
+      "notes": "Simulated perimeter firewall between the Internet and internal network zones."
+    },
+    {
+      "asset_id": "RTR-01",
+      "hostname": "rtr-northwind-01",
+      "asset_type": "Router",
+      "zone": "internet",
+      "ip_address": "203.0.113.1",
+      "criticality": "Critical",
+      "internet_facing": true,
+      "operating_system": "Fictional router operating system",
+      "notes": "Simulated internet edge router."
+    },
+    {
+      "asset_id": "SW-01",
+      "hostname": "sw-core-01",
+      "asset_type": "Core switch",
+      "zone": "internal_lan",
+      "ip_address": "10.20.0.2",
+      "criticality": "Critical",
+      "internet_facing": false,
+      "operating_system": "Fictional switch operating system",
+      "notes": "Simulated core switch connecting internal network zones."
+    },
+    {
+      "asset_id": "SRV-WEB-01",
+      "hostname": "web-northwind-01",
+      "asset_type": "Web server",
+      "zone": "dmz",
+      "ip_address": "198.51.100.20",
+      "criticality": "High",
+      "internet_facing": true,
+      "operating_system": "Fictional Linux server",
+      "notes": "Simulated public corporate website server."
+    },
+    {
+      "asset_id": "SRV-MAIL-01",
+      "hostname": "mail-northwind-01",
+      "asset_type": "Email server",
+      "zone": "dmz",
+      "ip_address": "198.51.100.25",
+      "criticality": "High",
+      "internet_facing": true,
+      "operating_system": "Fictional Linux server",
+      "notes": "Simulated email server."
+    },
+    {
+      "asset_id": "SRV-CRM-01",
+      "hostname": "crm-northwind-01",
+      "asset_type": "CRM server",
+      "zone": "server_vlan",
+      "ip_address": "10.20.10.15",
+      "criticality": "High",
+      "internet_facing": false,
+      "operating_system": "Fictional Windows Server",
+      "notes": "Simulated internal customer relationship management system."
+    },
+    {
+      "asset_id": "SRV-FILE-01",
+      "hostname": "file-northwind-01",
+      "asset_type": "File server",
+      "zone": "server_vlan",
+      "ip_address": "10.20.10.20",
+      "criticality": "High",
+      "internet_facing": false,
+      "operating_system": "Fictional Windows Server",
+      "notes": "Simulated internal file server."
+    },
+    {
+      "asset_id": "SRV-BACKUP-01",
+      "hostname": "backup-northwind-01",
+      "asset_type": "Backup server",
+      "zone": "server_vlan",
+      "ip_address": "10.20.10.30",
+      "criticality": "Critical",
+      "internet_facing": false,
+      "operating_system": "Fictional Linux server",
+      "notes": "Simulated backup server storing fictional backup data."
+    },
+    {
+      "asset_id": "AP-EMP-01",
+      "hostname": "ap-employee-01",
+      "asset_type": "Wireless access point",
+      "zone": "employee_wifi",
+      "ip_address": "10.20.20.10",
+      "criticality": "High",
+      "internet_facing": false,
+      "operating_system": "Fictional access-point firmware",
+      "notes": "Simulated employee Wi-Fi access point."
+    },
+    {
+      "asset_id": "AP-GUEST-01",
+      "hostname": "ap-guest-01",
+      "asset_type": "Wireless access point",
+      "zone": "guest_wifi",
+      "ip_address": "10.20.30.10",
+      "criticality": "Medium",
+      "internet_facing": false,
+      "operating_system": "Fictional access-point firmware",
+      "notes": "Simulated guest Wi-Fi access point."
+    },
+    {
+      "asset_id": "SIEM-01",
+      "hostname": "siem-northwind-01",
+      "asset_type": "Security monitoring system",
+      "zone": "management_vlan",
+      "ip_address": "10.20.100.10",
+      "criticality": "Critical",
+      "internet_facing": false,
+      "operating_system": "Fictional SIEM platform",
+      "notes": "Simulated centralized logging and monitoring system."
+    }
+  ]
+}

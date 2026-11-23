@@ -1,0 +1,43 @@
+{
+  "company": {
+    "name": "Northwind Business Solutions",
+    "type": "Fictional professional services company",
+    "employees": 75,
+    "locations": 1,
+    "assessment_type": "Simulated defensive network security assessment",
+    "assessment_reason": "The fictional company noticed unusual network activity and wants a defensive review of its network architecture, access controls, wireless setup, and monitoring.",
+    "disclaimer": "All company details, systems, IP addresses, hostnames, findings, and events in this project are fictional mock data created for defensive security learning."
+  },
+  "business_systems": [
+    {
+      "name": "Corporate website",
+      "purpose": "Public company website and customer contact form",
+      "criticality": "High",
+      "internet_facing": true
+    },
+    {
+      "name": "Customer relationship management system",
+      "purpose": "Stores fictional customer contact and sales records",
+      "criticality": "High",
+      "internet_facing": false
+    },
+    {
+      "name": "File server",
+      "purpose": "Stores internal business documents",
+      "criticality": "High",
+      "internet_facing": false
+    },
+    {
+      "name": "Email server",
+      "purpose": "Handles fictional business email",
+      "criticality": "High",
+      "internet_facing": true
+    },
+    {
+      "name": "Backup server",
+      "purpose": "Stores simulated backup copies of business data",
+      "criticality": "Critical",
+      "internet_facing": false
+    }
+  ]
+}

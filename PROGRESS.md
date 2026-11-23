@@ -2,22 +2,34 @@
 
 ## Current Phase
 
-Phase 2 — Define the fictional company and network scope
+Phase 3 — Build the logical network diagram
 
 ## Completed Phases
 
 - Phase 0: Project planning and approval
 - Phase 1: Create project structure and documentation
+- Phase 2: Define the fictional company and network scope
 
-## Phase 1 Tasks
+## Phase 2 Tasks
 
-- [x] Create project folder
-- [x] Create project subfolders
-- [x] Create Python virtual environment
-- [x] Create `.gitignore`
-- [x] Create `README.md`
-- [x] Create `PROGRESS.md`
-- [x] Verify project structure
+- [x] Create mock company profile
+- [x] Create mock network asset inventory
+- [x] Create network data-flow document
+- [x] Create logical network diagram
+- [x] Validate mock JSON files
+- [x] Verify network diagram opens correctly
+- [x] Update README.md and PROGRESS.md
+- [x] Take Phase 2 screenshot
+- [x] Upload Phase 2 files to GitHub
+
+## Phase 2 Summary
+
+Created a fictional company profile for Northwind Business Solutions, a mock
+network asset inventory with 7 network zones and 11 assets, a data-flow
+document with 10 primary flows, and a logical network diagram.
+
+The project contains 5 critical assets: the firewall, router, core switch,
+backup server, and SIEM.
 
 ## Notes
 
