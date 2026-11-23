@@ -122,6 +122,17 @@ Run the tests with coverage:
 pytest --cov=src --cov-report=term-missing
 ```
 
+## Project Presentation
+
+The project includes a presentation summarizing the simulated security
+assessment, key findings, defensive controls, incident-response plan, and
+automated testing results.
+
+Presentation files:
+
+- `presentations/enterprise-network-security-assessment.pptx`
+- `presentations/enterprise-network-security-assessment.pdf`
+
 ## Project Status
 
 See `PROGRESS.md` for the current phase and completed work.

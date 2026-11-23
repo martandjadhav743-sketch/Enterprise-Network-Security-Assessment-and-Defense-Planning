@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Phase 5 — Add automated tests
+Phase 7 — Final project review and cleanup
 
 ## Completed Phases
 
@@ -11,25 +11,30 @@ Phase 5 — Add automated tests
 - Phase 2: Define the fictional company and network scope
 - Phase 3: Build the Python risk-analysis foundation
 - Phase 4: Design defensive controls and firewall policy
+- Phase 5: Add automated tests
+- Phase 6: Create project presentation
 
-## Phase 4 Tasks
+## Phase 6 Tasks
 
-- [x] Create defensive security strategy
-- [x] Create recommended firewall policy
-- [x] Define network segmentation controls
-- [x] Define identity and access controls
-- [x] Define wireless security controls
-- [x] Define monitoring and logging controls
-- [x] Create simulated incident-response plan
+- [x] Create PowerPoint presentation
+- [x] Add project-overview slide
+- [x] Add assessment-scope slide
+- [x] Add risk-method slide
+- [x] Add key-findings slide
+- [x] Add defensive-controls slide
+- [x] Add incident-response slide
+- [x] Add testing-results slide
+- [x] Add conclusion slide
+- [x] Export presentation as PDF
 - [x] Update README.md and PROGRESS.md
-- [x] Take Phase 4 screenshot
-- [x] Upload Phase 4 files to GitHub
+- [x] Take Phase 6 screenshot
+- [x] Upload Phase 6 files to GitHub
 
-## Phase 4 Summary
+## Phase 6 Summary
 
-Created a defensive security strategy with 17 recommended firewall rules,
-network segmentation controls, identity and access controls, wireless security
-controls, monitoring requirements, and a simulated incident-response plan.
+Created a nine-slide presentation and PDF export summarizing the simulated
+assessment, key findings, defensive controls, incident-response plan, and
+automated testing results.
 
 ## Notes
 
