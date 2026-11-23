@@ -2,34 +2,34 @@
 
 ## Current Phase
 
-Phase 3 — Build the logical network diagram
+Phase 5 — Add automated tests
 
 ## Completed Phases
 
 - Phase 0: Project planning and approval
 - Phase 1: Create project structure and documentation
 - Phase 2: Define the fictional company and network scope
+- Phase 3: Build the Python risk-analysis foundation
+- Phase 4: Design defensive controls and firewall policy
 
-## Phase 2 Tasks
+## Phase 4 Tasks
 
-- [x] Create mock company profile
-- [x] Create mock network asset inventory
-- [x] Create network data-flow document
-- [x] Create logical network diagram
-- [x] Validate mock JSON files
-- [x] Verify network diagram opens correctly
+- [x] Create defensive security strategy
+- [x] Create recommended firewall policy
+- [x] Define network segmentation controls
+- [x] Define identity and access controls
+- [x] Define wireless security controls
+- [x] Define monitoring and logging controls
+- [x] Create simulated incident-response plan
 - [x] Update README.md and PROGRESS.md
-- [x] Take Phase 2 screenshot
-- [x] Upload Phase 2 files to GitHub
+- [x] Take Phase 4 screenshot
+- [x] Upload Phase 4 files to GitHub
 
-## Phase 2 Summary
+## Phase 4 Summary
 
-Created a fictional company profile for Northwind Business Solutions, a mock
-network asset inventory with 7 network zones and 11 assets, a data-flow
-document with 10 primary flows, and a logical network diagram.
-
-The project contains 5 critical assets: the firewall, router, core switch,
-backup server, and SIEM.
+Created a defensive security strategy with 17 recommended firewall rules,
+network segmentation controls, identity and access controls, wireless security
+controls, monitoring requirements, and a simulated incident-response plan.
 
 ## Notes
 

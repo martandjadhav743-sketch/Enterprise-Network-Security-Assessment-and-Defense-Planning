@@ -59,20 +59,41 @@ cd "C:\Users\marta\Desktop\Projects\Enterprise Network Security Assessment and D
 4. Validate the mock company profile:
 
 ```powershell
-python -c "import json; data=json.load(open(r'data\mock_company_profile.json', encoding='utf-8')); print('JSON is valid'); print(data['company']['name']); print(len(data['business_systems']), 'business systems')"
+python -c "from src.data_loader import load_company_profile, load_network_assets; company=load_company_profile(); assets=load_network_assets(); print('Company:', company['company']['name']); print('Business systems:', len(company['business_systems'])); print('Network zones:', len(assets['network_zones'])); print('Assets:', len(assets['assets']))"
 ```
 
-5. Validate the mock network asset inventory:
+5. Analyze the simulated findings and display the risk table:
 
 ```powershell
-python -c "import json; d=json.load(open(r'data\mock_network_assets.json', encoding='utf-8')); print('JSON is valid'); print(len(d['network_zones']), 'network zones'); print(len(d['assets']), 'assets'); print(sum(1 for a in d['assets'] if a['criticality']=='Critical'), 'critical assets')"
+python -c "from src.data_loader import load_json_file; from src.risk_engine import analyze_findings; from src.report_generator import create_risk_table; findings=analyze_findings(load_json_file('mock_findings.json')['findings']); print(create_risk_table(findings))"
 ```
 
-6. Open the logical network diagram:
+6. Generate and save the full assessment report:
 
 ```powershell
-Start-Process .\diagrams\network_diagram.svg
+python -c "from src.assessment_report import save_assessment_report; path=save_assessment_report('reports/network_security_assessment_report.md'); print('Saved:', path)"
 ```
+
+7. Open the generated report:
+
+```powershell
+Start-Process .\reports\network_security_assessment_report.md
+```
+
+## Defensive Controls
+
+The project includes a defensive security strategy and incident-response plan.
+
+Key controls include:
+
+- Network segmentation
+- Default-deny firewall policy
+- Guest Wi-Fi isolation
+- Multi-factor authentication for administrative access
+- Restricted DMZ-to-server communication
+- Centralized security logging and monitoring
+- Backup access restrictions
+- Incident-response preparation, detection, containment, recovery, and review
 
 ## Project Status
 
