@@ -1,0 +1,57 @@
+{
+  "assessment": {
+    "company": "Northwind Business Solutions",
+    "assessment_type": "Simulated defensive network security assessment",
+    "data_source": "Fictional mock inventory created for learning and documentation",
+    "disclaimer": "All assets, IP addresses, hostnames, configurations, findings, and events are fictional and must not be used against real networks."
+  },
+  "scope": {
+    "organization": "Northwind Business Solutions",
+    "organization_size": 75,
+    "assessment_boundary": "The simulated Northwind Business Solutions enterprise network, including its perimeter, internal LAN, server VLAN, wireless networks, management VLAN, and centralized security monitoring system.",
+    "assessment_period": "Simulated assessment period",
+    "assessment_objectives": [
+      "Evaluate network segmentation and traffic-control boundaries",
+      "Assess administrative access controls",
+      "Evaluate wireless network isolation",
+      "Assess centralized logging and monitoring",
+      "Evaluate protection of critical servers and backup systems",
+      "Identify defensive improvements and prioritize remediation"
+    ],
+    "in_scope": [
+      "Internet edge and perimeter network",
+      "DMZ and internet-facing services",
+      "Internal LAN",
+      "Server VLAN",
+      "Employee Wi-Fi",
+      "Guest Wi-Fi",
+      "Management VLAN",
+      "Firewall, router, core switch, servers, wireless access points, and SIEM"
+    ],
+    "out_of_scope": [
+      "Real production networks",
+      "Real customer or employee data",
+      "Third-party cloud services",
+      "Physical security controls",
+      "Application-source-code review",
+      "Active exploitation or testing against real systems"
+    ]
+  },
+  "supporting_documents": {
+    "network_assets": "data/mock_network_assets.json",
+    "network_data_flows": "docs/network_data_flows.md",
+    "network_diagram": "diagrams/network_diagram.svg",
+    "threat_risk_catalog": "docs/threat_risk_catalog.md"
+  },
+  "network_zones": [
+    "internet",
+    "dmz",
+    "internal_lan",
+    "server_vlan",
+    "employee_wifi",
+    "guest_wifi",
+    "management_vlan"
+  ],
+  "asset_count": 11,
+  "data_flow_count": 10
+}
